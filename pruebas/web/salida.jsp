@@ -3,9 +3,9 @@
     Created on : 14/07/2014, 02:27:08 PM
     Author     : Temporal
 --%>
-<jsp:useBean id="encuesta" scope="request" class="com.model.Encuesta" />
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<jsp:useBean id="encuesta" scope="request" class="com.model.Encuesta" />
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -13,13 +13,13 @@
     </head>
     <body>
         <h2>Agradecemos tu tiempo para contestar esta encuesta</h2>
-        <p> <%=request.getParameter("NombreCompleto")%>, indicado
-            en la encuesta que los lenguajes de programacion con los que estas
-            familiarizados son: 
+        <p> <jsp:getProperty name="encuesta" property="nombreCompleto" />;, 
+            indicado en la encuesta que los lenguajes de programacion con los
+            que estas familiarizados son: 
         </p>
         
         <ul>
-            <% String [] opciones= request.getParameterValues("lenguajes");
+            <% String [] opciones= encuesta.getLista();
             if( opciones != null){
                 
             for(int i=0; i< opciones.length; i++)
