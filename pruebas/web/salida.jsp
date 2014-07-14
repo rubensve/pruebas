@@ -13,9 +13,25 @@
     </head>
     <body>
         <h2>Agradecemos tu tiempo para contestar esta encuesta</h2>
-        <p> <%=request.getParameter("NombreCompleto")%>, has indicado
+        <p> <%=request.getParameter("NombreCompleto")%>, indicado
             en la encuesta que los lenguajes de programacion con los que estas
             familiarizados son: 
-        </p>     
+        </p>
+        
+        <ul>
+            <% String [] opciones= request.getParameterValues("lenguajes");
+            if( opciones != null){
+                
+            for(int i=0; i< opciones.length; i++)
+            {
+            
+            %>
+            <li>
+             <%= opciones[i] %>   
+            </li>
+            <% }
+            }
+            %>
+        </ul>
     </body>
 </html>
