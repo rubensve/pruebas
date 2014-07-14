@@ -3,7 +3,7 @@
     Created on : 14/07/2014, 02:27:08 PM
     Author     : Temporal
 --%>
-
+<jsp:useBean id="encuesta" scope="request" class="com.model.Encuesta" />
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>

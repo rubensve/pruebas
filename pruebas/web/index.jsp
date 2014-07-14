@@ -17,7 +17,7 @@
            Por favor indique cual de los siguientes lenguajes del programacion
            son familiarez para usted.
         </p>
-        <form action="salida.jsp">
+        <form action="servletuno" method="post">
             
             <table border="0">
             
